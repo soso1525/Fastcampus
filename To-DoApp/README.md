@@ -13,7 +13,7 @@
    Attempt to set a non-property-list object ("To_DoApp.Task(title: \"Task1\", done: false)")<br>
    as an NSUserDefaults/CFPreferences value for key tasks
 4. 컴파일 타임에 메서드를 바인딩하는 Swift와는 다르게 Objective-C는 런타임에 메서드를 바인딩하기 때문에<br>
-   @objc로 Objective-C와 유사한 방식으로 컴파일 되어야함을 컴파일러에게 알려주어야 한다.
+   @objc로 Objective-C와 유사한 방식으로 컴파일 되어야함을 컴파일러에게 알려주어야 한다.<br>
    #selector에서 objc 함수를 사용할 때는 function notation 방법으로 표기.
 5. UIAlertAction의 completionHandler 안에 순환참조 방지를 하였는데 찾아보니 필요하지 않아 보임.<br>
    [UIAlertController가 어디에 종속되어 있는지가 중요한데](https://itecnote.com/tecnote/ios-should-self-be-captured-as-strong-in-a-uialertactions-handler/) 함수 내에서 생성하여 호출하므로 순환참조가 발생하지 않는다고 함.
